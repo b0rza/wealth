@@ -1,0 +1,39 @@
+{
+  "name": "backup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/tailwindcss": "^6.10.3",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@mikro-orm/cli": "^5.9.7",
+    "@mikro-orm/core": "^5.9.7",
+    "@mikro-orm/migrations": "^5.9.7",
+    "@mikro-orm/postgresql": "^5.9.7",
+    "@mikro-orm/reflection": "^5.9.7",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.2"
+  },
+  "mikro-orm": {
+    "useTsNode": false,
+    "alwaysAllowTs": true,
+    "configPaths": [
+      "./server/config/mikro-orm.config.ts",
+      "./dist/server/config/mikro-orm.config.js"
+    ]
+  }
+}
